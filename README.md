@@ -1,140 +1,184 @@
-# 🛒 Techzone
+# 🛒 Techzone – PHP Based E-Commerce Website
 
-Techzone is a simple e-commerce web application built using **PHP** and
-**MySQL**.\
-It allows users to browse products, register/login, and manage a
-shopping cart.\
-The project follows a basic modular structure separating customer and
-admin functionalities.
+**Techzone** is a beginner-level e-commerce web application developed using **PHP** and **MySQL**.  
+The system allows users to browse available products, create accounts, log in, and manage a shopping cart. It also includes a basic **admin dashboard** that enables administrators to control product information.
 
-------------------------------------------------------------------------
-
-## 📌 Overview
-
-Techzone is designed as a beginner-friendly online shopping platform.\
-It demonstrates core web development concepts including:
-
--   Database connectivity
--   User authentication
--   Session handling
--   Cart management
--   Admin product control
-
-------------------------------------------------------------------------
-
-## 🚀 Features
-
--   ✅ User Registration & Login
--   ✅ Product Browsing
--   ✅ Add to Cart / Remove from Cart
--   ✅ Session-Based Cart System
--   ✅ Admin Panel (Product Management)
--   ✅ Database-Driven Product Storage
-
-------------------------------------------------------------------------
-
-## 🗂️ Project Structure
-
-    Techzone/
-    │
-    ├── admin/              # Admin panel files
-    ├── customer/           # Customer-facing pages
-    ├── pimg/               # Product images
-    ├── Screenshots/        # Website screenshots
-    ├── Cart.php            # Cart management logic
-    ├── connection.php      # Database connection file
-    ├── explore.php         # Product listing page
-    ├── index.php           # Homepage
-    ├── login.php           # Login page
-    ├── SignUp.php          # Registration page
-    ├── nav.php             # Navigation bar include
-    ├── footer.php          # Footer include
-    └── README.md           # Project documentation
-
-------------------------------------------------------------------------
-
-## ⚙️ Installation Guide
-
-### 1️⃣ Clone the Repository
-
-``` bash
-git clone https://github.com/iftikhoq/Techzone.git
-```
-
-### 2️⃣ Setup Database
-
--   Create a new MySQL database (e.g., `techzone`)
--   Import the provided `.sql` file (if available)
--   Or manually create required tables
-
-### 3️⃣ Configure Database Connection
-
-Open `connection.php` and update:
-
-``` php
-$con = mysqli_connect("localhost", "username", "password", "database_name");
-```
-
-### 4️⃣ Run the Project
-
--   Move project folder to:
-    -   `htdocs/` (XAMPP)
-    -   `www/` (WAMP)
--   Start Apache & MySQL
--   Visit:
-
-```{=html}
-<!-- -->
-```
-    http://localhost/Techzone/
-
+The purpose of this project is to demonstrate the fundamental concepts of **web development, database connectivity, user authentication, and session-based cart systems**.
 
 ---
 
-## 📸 Screenshots
+# 📌 About the Project
+
+Techzone simulates a simple **online shopping environment** where customers can explore products and add them to their cart before making purchasing decisions.
+
+The application is organized into two main sections:
+
+### Customer Section
+- User registration and login
+- Viewing available products
+- Managing shopping cart items
+
+### Admin Section
+- Managing product listings
+- Viewing customer information
+
+This project is mainly intended for **students and beginners** who want to understand how a basic e-commerce website works using **PHP and MySQL**.
+
+---
+
+# 🚀 Main Features
+
+- 👤 User account registration and login system
+- 🛍️ Product browsing interface
+- 🛒 Add products to cart
+- ❌ Remove items from cart
+- 🔄 Session-based cart handling
+- 🧑‍💼 Admin panel for product management
+- 💾 Product data stored in a MySQL database
+
+---
+
+# 📂 Project Directory Structure
+
+```
+Techzone/
+│
+├── admin/            # Admin related pages and controls
+├── customer/         # Pages accessible to customers
+├── pimg/             # Product image storage
+├── Screenshots/      # Website preview images
+│
+├── Cart.php          # Handles shopping cart operations
+├── connection.php    # Database connection setup
+├── explore.php       # Displays available products
+├── index.php         # Homepage of the website
+├── login.php         # User login interface
+├── SignUp.php        # User registration page
+├── nav.php           # Navigation bar component
+├── footer.php        # Footer component
+│
+└── README.md         # Project documentation
+```
+
+---
+
+# ⚙️ Setup and Installation
+
+## 1️⃣ Clone the Repository
+
+Run the following command to download the project:
+
+```
+git clone https://github.com/iftikhoq/Techzone.git
+```
+
+---
+
+## 2️⃣ Create the Database
+
+1. Open **phpMyAdmin**
+2. Create a database named:
+
+```
+techzone
+```
+
+3. Import the provided **SQL file** if available  
+   or manually create the necessary tables.
+
+---
+
+## 3️⃣ Configure Database Connection
+
+Open the file **connection.php** and modify the database credentials:
+
+```php
+$con = mysqli_connect("localhost","username","password","database_name");
+```
+
+Example configuration:
+
+```php
+$con = mysqli_connect("localhost","root","","techzone");
+```
+
+---
+
+## 4️⃣ Run the Application
+
+1. Move the project folder into:
+
+For **XAMPP**
+
+```
+htdocs/
+```
+
+For **WAMP**
+
+```
+www/
+```
+
+2. Start **Apache** and **MySQL**
+
+3. Open your browser and go to:
+
+```
+http://localhost/Techzone/
+```
+
+---
+
+# 📸 Screenshots
 
 ### Homepage
 ![Homepage](Screenshots/Picture1.png)
 
-### Signup
+### Signup Page
 ![Signup](Screenshots/Picture2.png)
 
 ### Shopping Cart
 ![Shopping Cart](Screenshots/Picture3.png)
 
-### Customer record
-![Customer record](Screenshots/Customer_record.png)
+### Customer Records
+![Customer Record](Screenshots/Customer_record.png)
 
+---
 
-------------------------------------------------------------------------
+# 🛠️ Technologies Used
 
-## 🛠️ Technologies Used
+The project is built using the following technologies:
 
--   PHP
--   MySQL
--   HTML
--   CSS
--   Session Handling
+- **PHP** – Backend logic
+- **MySQL** – Database management
+- **HTML** – Page structure
+- **CSS** – Styling
+- **PHP Sessions** – Cart management
 
-------------------------------------------------------------------------
+---
 
-## 🎯 Future Improvements
+# 🔮 Possible Future Enhancements
 
--   🔍 Product search & filtering
--   💳 Payment gateway integration
--   📦 Order history system
--   📱 Responsive UI using Bootstrap or Tailwind
--   🔐 Password hashing for better security
+Some improvements that could be added in the future include:
 
-------------------------------------------------------------------------
+- 🔍 Product search and filtering system
+- 💳 Online payment gateway integration
+- 📦 Order history tracking
+- 📱 Fully responsive UI using Bootstrap or Tailwind
+- 🔐 Password hashing and enhanced security features
 
-## 📄 License
+---
 
-This project is open-source and free to use for learning purposes.
+# 📄 License
 
-------------------------------------------------------------------------
+This project is open-source and mainly created for **learning and educational purposes**.
 
-## 👨‍💻 Author
+---
 
-**Iftikhirul Hoque**\
-GitHub: https://github.com/iftikhoq
+# 👨‍💻 Developer
+
+**Tamjidul Hasan**
+
+GitHub Profile:  
+https://github.com/MTH-Eraz
